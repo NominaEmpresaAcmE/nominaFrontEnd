@@ -29,12 +29,16 @@ import { MenuPrincipalComponent } from './menu-principal/menu-principal.componen
 import { RegistroAsesorComponent } from './registro-asesor/registro-asesor.component';
 
 import {HttpClientModule } from '@angular/common/http';
+import { VerAsesoresComponent } from './ver-asesores/ver-asesores.component';
+import { EditAsesorComponent } from './edit-asesor/edit-asesor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuPrincipalComponent,
-    RegistroAsesorComponent
+    RegistroAsesorComponent,
+    VerAsesoresComponent,
+    EditAsesorComponent
   ],
   imports: [
     BrowserModule,

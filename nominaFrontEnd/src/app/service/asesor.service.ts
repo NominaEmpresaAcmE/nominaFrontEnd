@@ -22,5 +22,18 @@ export class AsesorService {
 
    buscarAsesor (idAsesor: String):Observable<Asesor[]> {
     return this.http.get<Asesor[]>(`${this.apiLink}asesor/${idAsesor}`);
-}
+  }
+
+  getAllAsesores (): Observable<{data: Asesor[]}> {
+    return this.http.get <{data: Asesor[]}>(`${environment.apiUrl}asesor`);
+  }
+
+  deleteAsesor (idAsesor: String) {
+    this.http.delete(`${this.apiLink}asesor/${idAsesor}`).subscribe(asesor => console.log(asesor));
+  }
+
+  updateAsesor (asesor: Asesor) {
+    this.http.put(`${environment.apiUrl}asesor/${asesor.idAsesor}`, Asesor).subscribe(asesor => console.log(asesor));
+  }
+
 }
