@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemePalette } from '@angular/material/core';
 
 @Component({
   selector: 'app-registro-asesor',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroAsesorComponent implements OnInit {
 
-  constructor() { }
+  
+  title: string;
 
+  roles: string[] = ['Estudiante', 'Tutor', 'Jurado'];
+  hide = true;
+  color: ThemePalette = 'primary'
+  constructor() { 
+    this.title = 'Registro Poli Degree';
+  }
+
+  
   ngOnInit(): void {
+
   }
 
 }
