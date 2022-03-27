@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
+import { Asesor } from '../models/asesor.model';
+import {AsesorService} from '../service/asesor.service'
 
 @Component({
   selector: 'app-registro-asesor',
@@ -8,14 +10,13 @@ import { ThemePalette } from '@angular/material/core';
 })
 export class RegistroAsesorComponent implements OnInit {
 
-  
-  title: string;
-
   roles: string[] = ['Estudiante', 'Tutor', 'Jurado'];
   hide = true;
   color: ThemePalette = 'primary'
-  constructor() { 
-    this.title = 'Registro Poli Degree';
+  newAsesor: Asesor;
+  
+  constructor(private AsesorService: AsesorService) { 
+    this.newAsesor = new Asesor;
   }
 
   
@@ -23,4 +24,11 @@ export class RegistroAsesorComponent implements OnInit {
 
   }
 
+  public crearAsesor() {
+    this.AsesorService.createAsesor(this.newAsesor);
+ }
+
 }
+
+
+

@@ -13,14 +13,14 @@
         <form class="nombre">
             <mat-form-field class="nombre-input" appearance="fill">
             <mat-label>Nombre:</mat-label>
-            <input matInput placeholder="Ej. Jhon"  name="nombre">
+            <input matInput placeholder="Ej. Jhon"  [(ngModel)]="newAsesor.nombre" name="nombre">
             </mat-form-field>
         </form>
 
         <form class="edad">
             <mat-form-field class="username-input" appearance="fill">
             <mat-label>Edad:</mat-label>
-            <input matInput placeholder="Ej. 22"  name="edad">
+            <input matInput placeholder="Ej. 22"  [(ngModel)]="newAsesor.edad" name="edad">
             </mat-form-field>
         </form>
 
@@ -28,20 +28,20 @@
         <form class="correo">
             <mat-form-field class="correo-input" appearance="fill">
             <mat-label>Correo electronico:</mat-label>
-            <input matInput placeholder="Ej. Jhon@algo.com"  name="email">
+            <input matInput placeholder="Ej. Jhon@algo.com" [(ngModel)]="newAsesor.email" name="email">
             </mat-form-field>
         </form>
 
         <form class="direccion">
             <mat-form-field class="correo-input" appearance="fill">
             <mat-label>Direccion:</mat-label>
-            <input matInput placeholder="Ej. Calle 5 #86"  name="correo">
+            <input matInput placeholder="Ej. Calle 5 #86"  [(ngModel)]="newAsesor.direccion" name="correo">
             </mat-form-field>
         </form>
 
         <mat-form-field appearance="fill">
             <mat-label>Cargo</mat-label>
-            <mat-select>
+            <mat-select [(ngModel)]="newAsesor.cargo">
               <mat-option value="Junior">Junior</mat-option>
               <mat-option value="Senior">Senior</mat-option>
               <mat-option value="Master">Master</mat-option>
@@ -49,7 +49,7 @@
           </mat-form-field>
           <br>
     <button mat-flat-button color="primary" [routerLink]="['/home']" [style]="{'margin':'1%'}">Atras</button>
-    <button mat-flat-button color="primary" [routerLink]="['/home']" [style]="{'margin':'1%'}" >Registrar</button>
+    <button mat-flat-button color="primary" (click)="crearAsesor()" [style]="{'margin':'1%'}" >Registrar</button>
 
 
     </div>

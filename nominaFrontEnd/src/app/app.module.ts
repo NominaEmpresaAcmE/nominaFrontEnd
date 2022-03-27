@@ -28,6 +28,8 @@ import {MatTableModule} from '@angular/material/table';
 import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
 import { RegistroAsesorComponent } from './registro-asesor/registro-asesor.component';
 
+import {HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +57,8 @@ import { RegistroAsesorComponent } from './registro-asesor/registro-asesor.compo
     MatExpansionModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule
 
   ],
   providers: [],
