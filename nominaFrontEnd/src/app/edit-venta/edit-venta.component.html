@@ -1,0 +1,52 @@
+<div class="Cabecera">
+   
+</div>
+
+<section class="Formulario">
+   
+    <div class="titulo">
+        <h1>Modificar venta</h1>
+    </div>
+    
+   <div class="inputs">
+        
+    
+        <mat-form-field class="example-full-width" appearance="fill">
+             <mat-label>Fecha de venta</mat-label>
+            <input matInput [matDatepicker]="picker" [(ngModel)]="newVenta.fechaVenta">
+             <mat-datepicker-toggle matSuffix [for]="picker">
+             <mat-icon matDatepickerToggleIcon>calendar_today</mat-icon>
+             </mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+
+
+    
+         <form class="nombre">
+            <mat-form-field class="nombre-input" appearance="fill">
+            <mat-label>Producto:</mat-label>
+            <input matInput placeholder="Ej. Producto 1"  [(ngModel)]="newVenta.nombre" name="nombre">
+            </mat-form-field>
+        </form>
+        
+         <mat-form-field appearance="fill" floatLabel="always">
+            <mat-label>Valor</mat-label>
+            <input matInput type="number" [(ngModel)]="newVenta.valor" class="example-right-align" placeholder="0">
+            <span matPrefix>$&nbsp;</span>
+            <span matSuffix>.00</span>
+        </mat-form-field>
+    
+        <form class="cliente">
+            <mat-form-field class="nombre-input" appearance="fill">
+            <mat-label>Cliente:</mat-label>
+            <input matInput placeholder="Ej. Jhon"  [(ngModel)]="newVenta.cliente" name="cliente">
+            </mat-form-field>
+        </form>
+
+    <button mat-flat-button color="primary" [routerLink]="['/home']" [style]="{'margin':'1%'}">Atras</button>
+    <button mat-flat-button color="primary" (click)="editarVenta()" [style]="{'margin':'1%'}" >Editar</button>
+
+
+    </div>
+</section>

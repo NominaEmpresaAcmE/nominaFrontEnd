@@ -31,6 +31,9 @@ import { RegistroAsesorComponent } from './registro-asesor/registro-asesor.compo
 import {HttpClientModule } from '@angular/common/http';
 import { VerAsesoresComponent } from './ver-asesores/ver-asesores.component';
 import { EditAsesorComponent } from './edit-asesor/edit-asesor.component';
+import { VerVentasComponent } from './ver-ventas/ver-ventas.component';
+import { RegistroVentaComponent } from './registro-venta/registro-venta.component';
+import { EditVentaComponent } from './edit-venta/edit-venta.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { EditAsesorComponent } from './edit-asesor/edit-asesor.component';
     MenuPrincipalComponent,
     RegistroAsesorComponent,
     VerAsesoresComponent,
-    EditAsesorComponent
+    EditAsesorComponent,
+    VerVentasComponent,
+    RegistroVentaComponent,
+    EditVentaComponent
   ],
   imports: [
     BrowserModule,
