@@ -1,13 +1,17 @@
-<section>
+<section class="Menu">
+
+    <div class="titulo">
+        <h1>CRUD asesores</h1>
+    </div>
 
     <br>
-     <button mat-raised-button color="primary" [routerLink]="['/registroAs']" >Registrar Asesor</button>
+     <button mat-raised-button color="primary" [routerLink]="['/registroAs']"  [style]="{'margin':'1%'}">Registrar Asesor</button>
     <br>
-     <button mat-raised-button color="primary" [routerLink]="['/verAsesores']" (click)="cargar()">Ver Asesores</button>
+     <button mat-raised-button color="primary" [routerLink]="['/verAsesores']" [style]="{'margin':'1%'}" (click)="cargar()">Ver Asesores</button>
     <br>
-     <button mat-raised-button color="primary">Primary</button>
+     <button mat-raised-button color="primary" [style]="{'margin':'1%'}">Primary</button>
     <br>
-     <button mat-raised-button color="primary">Primary</button>
+     <button mat-raised-button color="primary" [style]="{'margin':'1%'}">Primary</button>
     
    
   </section>
